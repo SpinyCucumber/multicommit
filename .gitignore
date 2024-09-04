@@ -1,0 +1,36 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution and build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Test and coverage directories
+.coverage
+*.cover
+nosetests.xml
+coverage.xml
+*.log
+*.tmp
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/

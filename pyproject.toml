@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "multicommit"
+version = "0.1.0"
+description = "A Python command-line tool to extend Git <3"
+authors = ["Elijah Hilty <spinycucumber@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gitpython = "^3.1"  # Use the latest compatible version of GitPython
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+
+[tool.poetry.scripts]
+multicommit = "multicommit:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
