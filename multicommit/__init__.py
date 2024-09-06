@@ -1,7 +1,6 @@
 from git import Repo, Head
 
 import re
-import os
 import click
 
 SUFFIX_PATTERN = re.compile(r"^(?P<root>(?:[a-zA-Z-_/])*)_(?:(?:[A-Z])+_)*(?:[A-Z])+")
@@ -9,8 +8,7 @@ SUFFIX_PATTERN = re.compile(r"^(?P<root>(?:[a-zA-Z-_/])*)_(?:(?:[A-Z])+_)*(?:[A-
 @click.command()
 @click.option("--message", "-m", type=str, required=True)
 def main(message: str):
-    # Assume current working dir is a repo
-    repo = Repo(os.getcwd())
+    repo = Repo(search_parent_directories=True)
     # Commit!
     repo.index.commit(message)
     # If active branch is "subbranch", cherry-pick commit onto parent branch as well
